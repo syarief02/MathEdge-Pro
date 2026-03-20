@@ -283,6 +283,8 @@ This software is released under the **MIT License**. See [LICENSE](LICENSE) for 
 
 - Extended expiry to `2026-03-28`
 - Added on-chart dashboard (account, bias, levels, order status, expiry countdown)
+- Added compiled MT5 EA (`MathEdge Pro v1.1 - MT5 - 20260328.ex5`)
+- Source code protection via `.gitignore` (only compiled `.ex4`/`.ex5` distributed)
 - Improved spread filter logging
 - Added day-of-week filter (skip weekends/holidays)
 - Improved comment clarity and code structure
