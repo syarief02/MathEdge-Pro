@@ -248,7 +248,7 @@ To confirm the EA's calculations match your reference indicator:
 
 This version includes a license expiry mechanism:
 
-- **Current expiry date:** `2026.03.28` (New York time)
+- **Current expiry date:** `2026.09.30` (New York time)
 - A **warning alert** is triggered **7 days** before expiry
 - After expiry:
   - The EA stops placing new orders
@@ -281,9 +281,9 @@ This software is released under the **MIT License**. See [LICENSE](LICENSE) for 
 
 ### v1.1 — 2026-03-01
 
-- Extended expiry to `2026-03-28`
+- Extended expiry to `2026-09-30`
 - Added on-chart dashboard (account, bias, levels, order status, expiry countdown)
-- Added compiled MT5 EA (`MathEdge Pro v1.1 - MT5 - 20260328.ex5`)
+- Added compiled MT5 EA (`MathEdge Pro v1.1 - MT5 - 20260930.ex5`)
 - Source code protection via `.gitignore` (only compiled `.ex4`/`.ex5` distributed)
 - Improved spread filter logging
 - Added day-of-week filter (skip weekends/holidays)
