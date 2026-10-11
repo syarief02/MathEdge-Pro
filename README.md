@@ -221,7 +221,7 @@ When `ShowDashboard = true`, the EA displays a live panel on the chart showing:
 - **Window status** — whether the trading window is Open or Closed
 - **Levels** — PRV, CV, High, Low, TP, Net Change
 - **Order status** — T1, T2, T3 placement status
-- **Expiry countdown** — days remaining until license expiry
+- **License status** — "Permanent (no expiry)" on authorized and demo accounts, or the trial countdown on unauthorized real accounts
 
 ---
 
@@ -246,16 +246,17 @@ To confirm the EA's calculations match your reference indicator:
 
 ### Expiry
 
-This version includes a license expiry mechanism:
+- **Authorized (whitelisted) accounts never expire.** The license is permanent.
+- **Demo accounts never expire.**
+- **Unauthorized real accounts** run in trial mode until the trial date:
+  - **Current trial date:** `2026.10.30` (New York time)
+  - A **warning alert** is triggered **7 days** before the trial ends
+  - After the trial ends:
+    - The EA stops placing new orders
+    - All pending orders are cancelled
+    - Open trades can optionally be closed (`ExpiryCloseOpenTrades = true`)
 
-- **Current expiry date:** `2026.09.30` (New York time)
-- A **warning alert** is triggered **7 days** before expiry
-- After expiry:
-  - The EA stops placing new orders
-  - All pending orders are cancelled
-  - Open trades can optionally be closed (`ExpiryCloseOpenTrades = true`)
-
-> Contact the provider for license renewal when you see the expiry warning.
+> To get a permanent license, get your account authorized: see [eabudakubat.com/mathedge-pro](https://eabudakubat.com/mathedge-pro).
 
 ### License
 
@@ -271,13 +272,18 @@ This software is released under the **MIT License**. See [LICENSE](LICENSE) for 
 | "Symbol not allowed" message | Add your broker's symbol name to `AllowedSymbolsCSV`. |
 | Levels differ from TradingView | Toggle `UseCustomNYDailyOHLC`. Broker D1 candle boundaries may differ from NY 18:00. |
 | Orders skipped (spread) | The current spread exceeds `MaxSpreadPoints`. Wait for lower spread or increase the limit. |
-| EA expired | The license date has passed. Contact provider for renewal. |
+| EA expired | The trial ended on an unauthorized real account. Get the account authorized for a permanent license. |
 | T2/T3 not appearing | T2 and T3 only place **after T1 is filled**. This is by design. |
 | Dashboard not showing | Ensure `ShowDashboard = true` in the EA settings. |
 
 ---
 
 ## Changelog
+
+### v1.1 update — 2026-10-11
+
+- Authorized (whitelisted) and demo accounts no longer expire. The trial date now applies only to unauthorized real accounts.
+- Dashboard shows "License: Permanent (no expiry)" or the trial countdown
 
 ### v1.1 — 2026-03-01
 
