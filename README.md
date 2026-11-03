@@ -249,7 +249,7 @@ To confirm the EA's calculations match your reference indicator:
 - **Authorized (whitelisted) accounts never expire.** The license is permanent.
 - **Demo accounts never expire.**
 - **Unauthorized real accounts** run in trial mode until the trial date:
-  - **Current trial date:** `2026.10.30` (New York time)
+  - **Current trial date:** `2026.11.30` (New York time)
   - A **warning alert** is triggered **7 days** before the trial ends
   - After the trial ends:
     - The EA stops placing new orders
